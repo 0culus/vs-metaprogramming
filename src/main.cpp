@@ -20,4 +20,6 @@ int main() {
   auto t = std::make_tuple(10, 'c', "Hello, World!\n");
   std::cout.put('\n');
   for_each_tuple_element(t, [](auto&& e){std::cout<<e<<'\n';});
+
+  system("pause"); // stop debugging session from exiting immediately
 }
