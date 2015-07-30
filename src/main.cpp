@@ -3,6 +3,8 @@
 #include "merge_sort.hpp"
 #include "tuple_utilities.hpp"
 
+#define DEBUG 1
+
 int main() {
   using ints = std::integer_sequence<int, 8,7,33,6,22,5,55,4,3,2,22,1,0>;
   ints i;
@@ -21,5 +23,7 @@ int main() {
   std::cout.put('\n');
   for_each_tuple_element(t, [](auto&& e){std::cout<<e<<'\n';});
 
+#ifdef DEBUG
   system("pause"); // stop debugging session from exiting immediately
+#endif
 }
