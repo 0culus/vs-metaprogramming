@@ -7,7 +7,9 @@
 #include "merge_sort.hpp"
 #include "tuple_utilities.hpp"
 
+#ifndef DEBUG
 #define DEBUG 1
+#endif
 
 int main() {
   using ints = std::integer_sequence<int, 8,7,33,6,22,5,55,4,3,2,22,1,0>;
