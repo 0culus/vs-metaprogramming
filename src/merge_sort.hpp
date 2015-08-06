@@ -6,6 +6,7 @@
 template <typename T, T... Ts>
 std::ostream& operator<<(std::ostream& os, std::integer_sequence<T, Ts...>) {
   using swallow = int[];
+  // ReSharper C++ does not like this: "Cannot initialize temporary of type 'int[]' with rvalue of type 'int...'"
   (void)swallow { (void(os<<Ts<<' '), 0)... };
   return os;
 }
